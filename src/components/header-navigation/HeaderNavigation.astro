@@ -1,0 +1,15 @@
+---
+import { GetCategory } from "@/service/get.category"
+
+const data = await GetCategory()
+console.log(data)
+
+---
+
+{
+  data?.map((category) => (
+    <div>
+      <h1>{category.name}</h1>
+    </div>
+  ))
+}
