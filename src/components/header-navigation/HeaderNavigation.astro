@@ -1,15 +1,19 @@
 ---
-import { GetCategory } from "@/service/get.category"
+import { GetCategory } from '@/service/get.category';
+import { NavigationMenuDemo } from '../header';
+import UserAuth from './UserAuth.astro';
 
-const data = await GetCategory()
-console.log(data)
-
+const data = await GetCategory();
+console.log(data);
 ---
 
-{
-  data?.map((category) => (
-    <div>
-      <h1>{category.name}</h1>
+<header class="py-5">
+  <nav class="container mx-auto flex justify-between items-center">
+    <a href="/" class="text-xl">Biblioteca Misioneros</a>
+
+    <div class="flex items-center gap-3">
+      <NavigationMenuDemo server:defer />
+      <UserAuth />
     </div>
-  ))
-}
+  </nav>
+</header>
