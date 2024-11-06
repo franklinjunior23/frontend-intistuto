@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = 'Biblioteca Virtual';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
+export const URL_BACKEND = 'http://localhost:3000/';
